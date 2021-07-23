@@ -26,14 +26,14 @@ pipeline {
             steps {
                 echo 'Installing dependencies'
                 sh 'go version'
-                sh 'go get -u golang.org/x/lint/golint'
+                sh 'go get -u -u github.com/Janeth16mtz/DOTT-1/cidr_convert_api/go'
             }
         }
         stage('Build') {
             steps {
                 script{
                     def root = tool type: 'go', name: 'Go_version'
-                    sh 'cd cidr_convert_api/go/'
+                    
                     // Export environment variables pointing to the directory where Go was installed
                     withEnv(["GOROOT=${root}", "PATH+GO=${root}/bin"]) {
                         sh 'go build'
