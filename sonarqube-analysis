@@ -26,7 +26,7 @@ pipeline {
             steps {
                 echo 'Installing dependencies'
                 sh 'go version'
-                sh 'go get -v -u github.com/gorilla/mux'
+                sh 'go get -u "github.com/stretchr/testify/assert"'
             }
         }
         stage('Build') {
