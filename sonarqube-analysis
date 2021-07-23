@@ -25,7 +25,6 @@ pipeline {
         stage('Pre Test') {
             steps {
                 echo 'Installing dependencies'
-                sh 'go mod init'
                 sh 'go version'
                 sh 'go get -u github.com/Janeth16mtz/DOTT-1/cidr_convert_api/go'
             }
