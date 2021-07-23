@@ -27,7 +27,6 @@ pipeline {
                 echo 'Installing dependencies'
                 sh 'go version'
                 sh 'go get -v -u github.com/gorilla/mux'
-                //sh 'go get -u github.com/Janeth16mtz/DOTT-1/cidr_convert_api/go'
             }
         }
         stage('Build') {
@@ -43,7 +42,7 @@ pipeline {
             steps{
                 script{
                     dir("/var/lib/jenkins/workspace/DevOps-Project/cidr_convert_api/go"){
-                        sh "go test -v 'convert_test.go'"
+                        sh "go test -v"
                     }
                 }
             } 
