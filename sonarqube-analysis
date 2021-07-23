@@ -42,7 +42,7 @@ pipeline {
             steps{
                 script{
                     dir("/var/lib/jenkins/workspace/DevOps-Project/cidr_convert_api/go"){
-                        sh 'go test -v'
+                        sh 'go test -v main'
                     }
                 }
             } 
