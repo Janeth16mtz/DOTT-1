@@ -16,7 +16,7 @@ pipeline {
                     withSonarQubeEnv('sonar') {
                         sh "${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=jenkins \
                           -Dsonar.sources=./cidr_convert_api \
-                          -Dsonar.host.url=http://ec2-18-217-71-108.us-east-2.compute.amazonaws.com:9000 \
+                          -Dsonar.host.url=ec2-18-222-4-170.us-east-2.compute.amazonaws.com:9000 \
                           -Dsonar.login=1b781baf9286c06da74eb05ed0b3f287bcfe041f"
                     }
                 }
