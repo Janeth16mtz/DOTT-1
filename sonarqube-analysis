@@ -40,7 +40,11 @@ pipeline {
         }
         stage('Unit test'){
             steps{
-                sh 'go test -cover ./...'
+                script{
+                    dir("/var/lib/jenkins/workspace/DevOps-Project/cidr_convert_api/go"){
+                        sh 'go test -cover ./...'
+                    }
+                }
             } 
         }
     }
