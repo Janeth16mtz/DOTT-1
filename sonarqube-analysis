@@ -31,7 +31,11 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'go build cidr_convert_api/go'
+                script{
+                    dir("/var/lib/jenkins/workspace/DevOps-Project/cidr_convert_api/go"){
+                        sh 'go build cidr_convert_api/go'
+                    }
+                }
             }
         }
         stage('Unit test'){
