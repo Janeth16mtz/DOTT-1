@@ -26,7 +26,7 @@ pipeline {
             steps {
                 echo 'Installing dependencies'
                 sh 'go version'
-                sh 'go get -u https://github.com/Janeth16mtz/DOTT-1'
+                sh 'go get -u github.com/Janeth16mtz/DOTT-1/cidr_convert_api/go'
             }
         }
         stage('Build') {
